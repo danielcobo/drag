@@ -4,24 +4,14 @@ Add proper drag events to enable things like GUI for element creation, resizing,
 
 ## 🧭 Table of contents
 
-- [drag](#drag)
-  - [🧭 Table of contents](#-table-of-contents)
-  - [✨ Benefits](#-benefits)
-  - [🎒 Requierments](#-requierments)
-  - [🚀 Quickstart](#-quickstart)
-    - [Install](#install)
-      - [NodeJS](#nodejs)
-      - [Browser](#browser)
-    - [Example use](#example-use)
-  - [📘 Documentation](#-documentation)
-    - [.off()](#off)
-    - [.on()](#on)
-  - [🆘 Troubleshooting](#-troubleshooting)
-  - [🤝 Contributing](#-contributing)
-    - [Anyone can contribute](#anyone-can-contribute)
-    - [Rules for contributions](#rules-for-contributions)
-  - [🧪 Testing](#-testing)
-  - [⚖️ License](#️-license)
+- [✨ Benefits](#-benefits)
+- [🎒 Requierments](#-requierments)
+- [🚀 Quickstart](#-quickstart)
+- [📘 Documentation](#-documentation)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [🤝 Contributing](#-contributing)
+- [🧪 Testing](#-testing)
+- [⚖️ License](#️-license)
 
 ## ✨ Benefits
 
