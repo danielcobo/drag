@@ -1,6 +1,6 @@
 Copyright Daniel Cobo (https://danielcobo.com/) and other contributors
 
-This software may consist of voluntary contributions made by many individuals. For exact contribution history, see the revision history available at https://github.com/danielcobo/drawevents
+This software may consist of voluntary contributions made by many individuals. For exact contribution history, see the revision history available at https://github.com/danielcobo/drag
 
 The following license applies to all parts of this software except as documented below:
 
