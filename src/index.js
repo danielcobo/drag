@@ -85,8 +85,9 @@ document.addEventListener('pointerdown', dragStart);
 const drag = {};
 
 /**
- * @public
  * Enable drag events on given element/s
+ * @public
+ * @alias on
  * @param {string} selector
  */
 drag.on = function dragOn(selector) {
@@ -94,8 +95,9 @@ drag.on = function dragOn(selector) {
 };
 
 /**
- * @public
  * Disable drag events on given element/s
+ * @public
+ * @alias off
  * @param {string} selector
  */
 drag.off = function dragOff(selector) {
