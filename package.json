@@ -4,8 +4,8 @@
  "description": "Add draw events to enable things like GUI for element creation, resizing, etc.",
  "main": "src/index.js",
  "scripts": {
-  "test": "jest --collectCoverage --runInBand",
-  "testing": "jest --watch --collectCoverage --runInBand",
+  "test": "jest --env=jsdom --collectCoverage --runInBand",
+  "testing": "jest --env=jsdom --watch --collectCoverage --runInBand",
   "mutation": "npx stryker run",
   "docs": "docs",
   "patch": "git push && npm version patch && npm publish",
