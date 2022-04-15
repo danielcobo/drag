@@ -1,10 +1,13 @@
 /**
  * Check if element matches any selector in index
  * @param {HTMLElement} element
- * @param {object} index - has selectors for keys and truthy values
+ * @param {object} index - has selectors for keys
  * @return {boolean} - true/false if element matches any selector in index
  */
 const matchIndex = function matchIndex(element, index) {
+  if (element.nodeName === '#document') {
+    return true;
+  }
   for (key in index) {
     if (element.matches(key)) {
       return true;
@@ -22,7 +25,10 @@ const dragStart = function dragStart(e) {
     data.target = e.target;
     data.start = { x: e.pageX, y: e.pageY };
     let $parent;
-    if (data.target === '#document' || 'HTML') {
+    if (
+      data.target.nodeName === '#document' ||
+      data.target.nodeName === 'HTML'
+    ) {
       $parent = document.querySelector('body');
     } else {
       $parent = data.target.parentElement;
@@ -76,19 +82,24 @@ const dragStop = function dragStop(e) {
 
 const data = { on: {} };
 document.addEventListener('pointerdown', dragStart);
+const drag = {};
 
 /**
+ * @public
  * Enable drag events on given element/s
  * @param {string} selector
  */
-const dragOn = function dragOn(selector) {
+drag.on = function dragOn(selector) {
   data.on[selector] = true;
 };
 
 /**
+ * @public
  * Disable drag events on given element/s
  * @param {string} selector
  */
-const dragOff = function dragOff(selector) {
-  data.on[selector] = false;
+drag.off = function dragOff(selector) {
+  delete data.on[selector];
 };
+
+module.exports = drag;
