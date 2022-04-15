@@ -21,9 +21,7 @@ Add proper drag events to enable things like GUI for element creation, resizing,
 
 ## 🎒 Requierments
 
-To use this package you will need:
-
-- [NodeJS](https://nodejs.org/en/)
+No requierments.
 
 ## 🚀 Quickstart
 
