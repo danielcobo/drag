@@ -70,18 +70,40 @@ document.body.innerHTML = `
 
 drag.on('p');
 let eventFired
-document.addEventListener('dragStart', function () {
+document.addEventListener('dragStart', function (e) {
   eventFired = true;
+  e.detail //contains useful data
 });
 
 const e = new Event('pointerdown', { bubbles: true });
 document.querySelector('p').dispatchEvent(e);
 //eventFired === true;
+
+//Other events are dragMove and dragStop
+//Always listen for events on document
+//Get pointerdown element by e.detail.target
 ```
 
 For details see documentation below.
 
 ## 📘 Documentation
+### EventData : `object`
+Useful data in e.detail
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| on | `object` | Selectors the draag events are working for in form of object keys |
+| target | `HTMLElement` | Element that was pressed on at dragStart |
+| parent.x | `number` | X of parent element |
+| parent.y | `number` | Y of parent element |
+| start.x | `number` | X on dragStart |
+| start.y | `number` | Y on dragStart |
+| now.x | `number` | X on dragMove / dragStop |
+| now.y | `number` | Y on dragMove / dragStop |
+| diff.x | `number` | Difference in x between start and now |
+| diff.y | `number` | Difference in y between start and now |
+
+<sub>**Source:** [src/index.js:107](https://github.com/danielcobo/drag/blob/master/src/index.js?plain=1#L107)</sub>
 ### .off()
 Disable drag events on given element/s
 

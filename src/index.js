@@ -104,4 +104,20 @@ drag.off = function dragOff(selector) {
   delete data.on[selector];
 };
 
+/**
+ * Useful data in e.detail
+ * @typedef {object} EventData
+ * @public
+ * @property {object} on - selectors the draag events are working for in form of object keys
+ * @property {HTMLElement} target - element that was pressed on at dragStart
+ * @property {number} parent.x - x of parent element
+ * @property {number} parent.y - y of parent element
+ * @property {number} start.x - x on dragStart
+ * @property {number} start.y - y on dragStart
+ * @property {number} now.x - x on dragMove / dragStop
+ * @property {number} now.y - y on dragMove / dragStop
+ * @property {number} diff.x - difference in x between start and now
+ * @property {number} diff.y - difference in y between start and now
+ */
+
 module.exports = drag;

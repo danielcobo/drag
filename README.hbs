@@ -70,13 +70,18 @@ document.body.innerHTML = `
 
 drag.on('p');
 let eventFired
-document.addEventListener('dragStart', function () {
+document.addEventListener('dragStart', function (e) {
   eventFired = true;
+  e.detail //contains useful data
 });
 
 const e = new Event('pointerdown', { bubbles: true });
 document.querySelector('p').dispatchEvent(e);
 //eventFired === true;
+
+//Other events are dragMove and dragStop
+//Always listen for events on document
+//Get pointerdown element by e.detail.target
 ```
 
 For details see documentation below.
